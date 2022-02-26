@@ -1,4 +1,4 @@
-module github.com/kevbaker2/go-service-rest-fib-two
+module github.com/kevbaker/go-service-rest-fib-two
 
 go 1.17
 
