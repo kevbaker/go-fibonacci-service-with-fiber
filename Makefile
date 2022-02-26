@@ -1,4 +1,4 @@
 start:
 	go run main.go
 run-examples-fib:
-	cd examples; go run fib.go
+	cd examples/fib; go run fib.go
