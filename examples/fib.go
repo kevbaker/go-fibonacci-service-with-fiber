@@ -8,20 +8,6 @@ import (
 	fib "github.com/t-pwk/go-fibonacci"
 )
 
-// type Int64ListResponse struct {
-// 	Data   []uint64
-// 	Status int
-// 	hideMe string
-// }
-
-// func (r responses.Int64ListResponse) Json() []byte {
-// 	rj, err := json.MarshalIndent(r, "", "  ")
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	return rj
-// }
-
 func GenerateFibonacciList(numberCount int) []uint64 {
 	var fibonacciList []uint64
 	fmt.Println(fibonacciList)
