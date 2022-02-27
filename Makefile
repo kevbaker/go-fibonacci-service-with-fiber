@@ -18,3 +18,6 @@ docker-stop:
 	docker stop ${DOCKER_CONTAINER_NAME}
 	docker ps -a
 
+air-install:
+	# REF: https://github.com/cosmtrek/air
+	sh air_install.sh
