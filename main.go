@@ -1,6 +1,9 @@
 package main
 
 import (
+	"fmt"
+	"strconv"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/kevbaker/go-service-rest-fib-two/responses"
 	"github.com/kevbaker/go-service-rest-fib-two/utils"
@@ -19,9 +22,13 @@ func main() {
 	})
 
 	app.Get("/fibonacci", func(c *fiber.Ctx) error {
-		// var count = int c.Query("count")
-		// fmt.Println(string(c.Request().URI().QueryString()))
-		fl := utils.GenerateFibonacciList(200)
+		countString := string(c.Query("count"))
+		count := 10
+		if countString != "" {
+			count, _ = strconv.Atoi(countString)
+		}
+		fmt.Println(count)
+		fl := utils.GenerateFibonacciList(count)
 		response := responses.Int64ListResponse{Data: fl, Status: 200}
 		return c.SendString(string(response.Json()))
 	})

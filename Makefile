@@ -3,6 +3,8 @@ DOCKER_CONTAINER_NAME=go-fiber-two
 
 start:
 	go run main.go
+start-reload:
+	./bin/air
 run-examples-fib:
 	cd examples/fib; go run fib.go
 build:
