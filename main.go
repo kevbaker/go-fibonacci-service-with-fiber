@@ -9,6 +9,15 @@ import (
 	"github.com/kevbaker/go-service-rest-fib-two/utils"
 )
 
+func getContextQueryInt(c *fiber.Ctx, queryKey string, defaultInt int) int {
+	valueString := string(c.Query(queryKey))
+	value := defaultInt
+	if valueString != "" {
+		value, _ = strconv.Atoi(valueString)
+	}
+	return value
+}
+
 func main() {
 
 	app := fiber.New()
@@ -22,11 +31,8 @@ func main() {
 	})
 
 	app.Get("/fibonacci", func(c *fiber.Ctx) error {
-		countString := string(c.Query("count"))
-		count := 10
-		if countString != "" {
-			count, _ = strconv.Atoi(countString)
-		}
+		count := getContextQueryInt(c, "count", 10)
+
 		fmt.Println(count)
 		fl := utils.GenerateFibonacciList(count)
 		response := responses.Int64ListResponse{Data: fl, Status: 200}
