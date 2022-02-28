@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/kevbaker/go-service-rest-fib-two/responses"
-	"github.com/kevbaker/go-service-rest-fib-two/utils"
+	"github.com/kevbaker/go-service-rest-fib-two/lib/responses"
+	"github.com/kevbaker/go-service-rest-fib-two/lib/utils"
 )
 
 func getContextQueryInt(c *fiber.Ctx, queryKey string, defaultInt int) int {

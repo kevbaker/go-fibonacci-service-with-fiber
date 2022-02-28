@@ -19,7 +19,8 @@ docker-run:
 docker-stop:
 	docker stop ${DOCKER_CONTAINER_NAME}
 	docker ps -a
+docker-kill:
+	docker kill ${DOCKER_CONTAINER_NAME}
 
 air-install:
-	# REF: https://github.com/cosmtrek/air
-	sh air_install.sh
+	sh ./extra/scripts/air_install.sh

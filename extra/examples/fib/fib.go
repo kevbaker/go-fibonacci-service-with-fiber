@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/kevbaker/go-service-rest-fib-two/responses"
-	"github.com/kevbaker/go-service-rest-fib-two/utils"
+	"github.com/kevbaker/go-service-rest-fib-two/lib/responses"
+	"github.com/kevbaker/go-service-rest-fib-two/lib/utils"
 )
 
 func main() {
