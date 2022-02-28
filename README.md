@@ -38,6 +38,13 @@ make docker-run
 make docker-stop
 ```
 
+## Usage
+
+* Run the service using the commands above
+* Call service `curl -X GET http://localhost:3000/fibonacci?count=100`
+* The above `count` set the numnber of items in the fibonacci sequence.
+* NOTE: Larger `count` values will have a noticable impact on CPU.
+
 
 ## NOTES
 

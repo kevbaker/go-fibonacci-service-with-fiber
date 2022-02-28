@@ -1,6 +1,16 @@
 DOCKER_IMAGE_NAME=go-service-rest-fiber-two
 DOCKER_CONTAINER_NAME=go-fiber-two
 
+
+# HELP
+help:
+	@echo "\nTARGETS:\n"
+	@make -qpRr | egrep -e '^[a-z].*:$$' | sed -e 's~:~~g' | sort
+	@echo ""
+list:
+	make help
+
+# TARGETS
 start:
 	go run main.go
 start-reload:
