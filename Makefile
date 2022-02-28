@@ -1,6 +1,6 @@
-DOCKER_IMAGE_NAME=go-service-rest-fiber-two
-DOCKER_CONTAINER_NAME=go-fiber-two
-
+DOCKER_IMAGE_NAME=go-fibonacci-service-fiber
+DOCKER_CONTAINER_NAME=go-fibonacci-service-fiber-c
+DOCKER_USERNAME=kevbaker
 
 # HELP
 help:
@@ -31,6 +31,10 @@ docker-stop:
 	docker ps -a
 docker-kill:
 	docker kill ${DOCKER_CONTAINER_NAME}
+
+docker-push:
+	docker image tag ${DOCKER_IMAGE_NAME}:latest ${DOCKER_USERNAME}/${DOCKER_IMAGE_NAME}:latest
+	docker push ${DOCKER_USERNAME}/${DOCKER_IMAGE_NAME}:latest
 
 air-install:
 	sh ./extra/scripts/air_install.sh
