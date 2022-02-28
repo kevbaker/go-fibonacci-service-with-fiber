@@ -1,4 +1,4 @@
-# Go Service REST Fiber Two
+# Go Fibonacci Example Service with Fiber
 
 ## Overview
 
